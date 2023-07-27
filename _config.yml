@@ -192,3 +192,5 @@ animation:
 
 dark_mode:
   enable: false
+
+fireworks: false
