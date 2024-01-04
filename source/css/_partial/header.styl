@@ -188,7 +188,7 @@ $nav-link-wrap
 
 .main-nav-icon
   @extend $nav-link
-  background: url("/images/taichi.svg") no-repeat center / 80%
+  background: url("/images/taichi.png") no-repeat center / 80%
   transform: rotate(0deg)
   transition: transform 1s
 
@@ -199,7 +199,7 @@ $nav-link-wrap
   &:before
     font-family: font-icon
     content: "\f0c9"
-  @media mq-mobile
+  @media mg-large
     display: block
 
 #sub-nav
@@ -221,11 +221,13 @@ $nav-link-wrap
   &:before
     font-family: font-icon
     content: "\f185"
+    font-weight: 900
 
 #nav-moon-btn
   &:before
     font-family: font-icon
     content: "\f186"
+    font-weight: 900
 
 #search-form-wrap
   position: absolute

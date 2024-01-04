@@ -14,27 +14,35 @@
         <div id="wrap">
             <%- partial('_partial/header', {post: page}, {cache: false}) %>
             <div id="content" class="outer">
+                <% if (theme.sidebar === 'left'){ %>
+                    <%- partial('_partial/sidebar', null) %>
+                <% } %>
                 <section id="main"><%- body %></section>
-                <% if (theme.sidebar){ %>
+                <% if (theme.sidebar === 'right'){ %>
                     <%- partial('_partial/sidebar', null) %>
                 <% } %>
             </div>
             <%- partial('_partial/footer', null, {cache: !config.relative_link}) %>
+            <div class="sidebar-top">
+              <img src="/images/taichi.png" height="50" width="50"/>
+              <div class="arrow-up"></div>
+            </div>
+            <div id="mask"></div>
         </div>
-        <%- partial('_partial/mobile-nav', null, {cache: !config.relative_link}) %>
+        <%- partial('_partial/mobile-nav', null, {cache: false}) %>
         <%- partial('_partial/after-footer') %>
     </div>
     <div class="site-search">
-        <div class="algolia-popup popup">
-            <div class="algolia-search">
-                <span class="algolia-search-input-icon"></span>
-                <div class="algolia-search-input" id="algolia-search-input"></div>
+        <div class="reimu-popup popup">
+            <div class="reimu-search">
+                <span class="reimu-search-input-icon"></span>
+                <div class="reimu-search-input" id="reimu-search-input"></div>
             </div>
 
-            <div class="algolia-results">
-                <div id="algolia-stats"></div>
-                <div id="algolia-hits"></div>
-                <div id="algolia-pagination" class="algolia-pagination"></div>
+            <div class="reimu-results">
+                <div id="reimu-stats"></div>
+                <div id="reimu-hits"></div>
+                <div id="reimu-pagination" class="reimu-pagination"></div>
             </div>
 
             <span class="popup-btn-close"></span>
